@@ -11,3 +11,5 @@ Picture of my startup application
 ![Startup application pic](https://user-images.githubusercontent.com/122133933/215208514-50c80193-3877-4dc7-b216-711a132190b1.jpeg)
 
 
+
+Features of my startup application
