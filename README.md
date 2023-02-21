@@ -20,3 +20,7 @@ My application will include live chatting between users over calendar items. Ind
 What I learned while doing the Simon HTML project:
 
  I learned that HTML can be a bit repetitive sometimes. However, it is very user friendly and not difficult to understand. I'm sure that there are more difficult aspects of HTML than what I was doing, but it seems like the basics of HTML are pretty simple to grasp. I learned that every attribute needs to be opened and closed which is similar to how functions need to have start and close brackets. I also learned that I can do minor styling with HTML, although I'm sure it's not nearly as effective as CSS.
+
+What I learned while doing the Simon CSS project:
+
+I learned that HTML and CSS work together to create an attractive website. Using Bootstrap, you can implement changes to the overall appearance of the website. Flex can be used to make sure that the website looks how you want it to on different sizes of browsers and devices. Overall, these are fairly user friendly and fun to experiment with.
