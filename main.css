@@ -13,6 +13,10 @@ header {
   display: flex;
 }
 
+header p {
+  font-size: 13px;
+}
+
 .account {
   flex: 1;
 }
