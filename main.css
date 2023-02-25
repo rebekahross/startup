@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Tilt Neon", cursive;
+  padding: 1em;
+  background-color: #2929ff;
+  color: rgb(225, 224, 224);
+  display: flex;
+}
+
+.account {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+}
+
+section:nth-child(1) {
+  flex: 1;
+  background-color: lightgrey;
+  padding: 15px;
+}
+
+section:nth-child(2) {
+  flex: 5;
+  padding: 15px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+th {
+  text-align: left;
+}
+
+.buttons {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.header-thing {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+
+.button-clicks {
+  text-decoration: none;
+  color: black;
+}
+
+.active-button {
+  text-decoration: none;
+  color: white;
+}
+
+.today {
+  background-color: black;
+}
+
+.button-left {
+  text-align: left;
+}
+
+.arrow-right {
+  height: 50px;
+  width: 50px;
+}
+
+.arrow-left {
+  height: 50px;
+  width: 50px;
+}
+
+.account-image {
+  height: 50px;
+  width: 50px;
+}
+
+figcaption {
+  font-size: smaller;
+  color: white;
+}
+
+.title {
+  padding: 10px;
+  flex: 12;
+  font-family: "Tilt Neon", cursive !important;
+}
+
+.day-table {
+  color: rgb(186, 185, 185);
+}
