@@ -96,9 +96,22 @@ figcaption {
 .title {
   padding: 10px;
   flex: 12;
-  font-family: "Tilt Neon", cursive !important;
+  font-family: "Tilt Neon" !important;
 }
 
 .day-table {
   color: rgb(186, 185, 185);
+}
+
+.grey-account {
+  width: 300px;
+  height: 300px;
+}
+
+.grey-font {
+  color: rgb(113, 109, 109);
+}
+
+.settings-info {
+  text-align: left;
 }
