@@ -25,3 +25,7 @@ I learned that HTML and CSS work together to create an attractive website. Using
 What I learned from doing the Start Up Deliverable - HTML and CSS
 
 I learned that the internet is a great tool to use when trying to learn more. I learned that when I don't know how to do something in HTML or CSS, there are many resources I can turn to. I learned how to make my pages connect through links. I learned how to use Bootstrap better. I tried to learn how to design a layout that would be intiuitive for a user
+
+What I learned from doing the Simon Javascript
+
+ I think this is a pretty difficult concept. Javascript is difficult to understand and incorporate, but one thing I learned is to start small and work bigger from there. My code and implementation does not need to be perfect on the first run through or attempt, so I just need to get plugging along and making an effort to improve my code and understand what is happening in the code.
