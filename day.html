@@ -49,98 +49,26 @@
 
         <div class="header-thing">
         <div class="buttons">
-          <button class="btn btn-primary button-left">+ Create new</button>
+          <button id="modalBtn" class="btn btn-primary button-left">+ Create new activity</button>
+          <div id="modalPopUp" class ="modal">
+            <div class="modal-content">
+              <h2 class="padding">Create new activity</h2>
+              <label for="text" class="padding">Activity:</label>
+              <input type ="text" id="text" name="varText" placeholder = "Activity"/>
+              
+              <button class="btn btn-primary" onclick="save()">Save</button>
+            <span class="close">&times;</span>
+          </div>
+         </div>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-dark active"><a class="active-button" href="day.html">Day</a>
             </label>
             <label class="btn btn-outline-dark"><a class="button-clicks" href="index.html">Month</a>
             </label>
-            <label class="btn btn-outline-dark"><a class="button-clicks" href="year.html">Year</a>
-            </label>
           </div>
         </div>
     </div>
     </div>
-        <div>
-          <table class="table table-bordered day-table" width=100%>
-            <tr>
-              <td class="grey-font" width=15%>12am</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="grey-font" width=15%>1am</td>
-              <td></td>
-              </tr>
-              <tr>
-                <td class="grey-font" width=15%>2am</td>
-              <td></td>
-              </tr>
-              <tr>
-                <td class="grey-font" width=15%>3am</td>
-              </tr>
-              <tr>
-                <td class="grey-font" width=15%>4am</td>
-              </tr>
-              <tr>
-                <td class="grey-font" width=15%>5am</td>
-              </tr>
-              <tr>
-                <td class="grey-font" width=15%>6am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">7am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">8am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">9am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">10am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">11am</td>
-              </tr>
-              <tr>
-                <td class="grey-font">12pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">1pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">2pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">3pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">4pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">5pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">6pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">7pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">8pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">9pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">10pm</td>
-              </tr>
-              <tr>
-                <td class="grey-font">11pm</td>
-              </tr>
-
-          </table>
-        </div>
       </section>
     </main>
   </body>
