@@ -81,7 +81,18 @@ th {
   text-align: left;
 }
 
-.arrow-right {
+.arrow {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.dateArrows {
+  text-align: center;
+  flex-direction: column;
+}
+
+/* .arrow-right {
   height: 50px;
   width: 50px;
 }
@@ -89,7 +100,7 @@ th {
 .arrow-left {
   height: 50px;
   width: 50px;
-}
+} */
 
 .account-image {
   height: 50px;
@@ -122,4 +133,71 @@ figcaption {
 
 .settings-info {
   text-align: left;
+}
+
+.center {
+  text-align: center;
+  flex-direction: row;
+}
+
+.padding {
+  padding: 10px;
+}
+
+h2.padding {
+  padding-top: 30px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  width: calc(100% / 7);
+  font-size: 15px;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: black;
+  color: white;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+.calendar .year {
+  width: calc(100% / 3);
 }
