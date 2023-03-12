@@ -225,3 +225,7 @@ h2.padding {
   text-decoration: none;
   cursor: pointer;
 }
+
+.activity {
+  background-color: red;
+}
