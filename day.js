@@ -1,24 +1,12 @@
-// Get the modal
-
 let modal = document.getElementById("modalPopUp");
-
-// Get the button that opens the modal
 let btn = document.getElementById("modalBtn");
-
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
-
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -170,15 +158,97 @@ prevNextArrow.forEach((arrow) => {
   });
 });
 
-function save() {
-  const activityEl = document.querySelector("#activity");
-  localStorage.setItem("activity", activityEl.value);
-  window.location.href = "day.html";
+window.onload = loadActivities;
+
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  addActivity();
+});
+
+function activityComplete(event) {
+  let activities = Array.from(JSON.parse(localStorage.getItem("activities")));
+  activities.forEach((activity) => {
+    if (activity.activity === event.nextElementSibling.value) {
+      activity.completed = !activity.completed;
+    }
+  });
+  localStorage.setItem("activities", JSON.stringify(activities));
+  event.nextElementSibling.classList.toggle("completed");
 }
 
-// function getActivity() {
-//   return localStorage.getItem("activity");
-// }
+function loadActivities() {
+  if (localStorage.getItem("activities") == null) return;
 
-// const activityEl = document.querySelector(".activity");
-// activityEl.innerHTML = this.getActivity();
+  let activities = Array.from(JSON.parse(localStorage.getItem("activities")));
+
+  activities.forEach((activity) => {
+    const list = document.querySelector("ul");
+    const li = document.createElement("li");
+    li.innerHTML = `<input type="checkbox" onclick="activityComplete(this)" class="check" ${
+      activity.completed ? "checked" : ""
+    }>
+          <input type="text" value="${activity.activity}" class="activity ${
+      activity.completed ? "completed" : ""
+    }" onfocus="getActivity(this)" onblur="editActivity(this)">
+    <span class="close" onclick="removeActivity(this)">&times;</span>`;
+    list.insertBefore(li, list.children[0]);
+  });
+}
+
+function editActivity(event) {
+  let activities = Array.from(JSON.parse(localStorage.getItem("activities")));
+  if (event.value === "") {
+    alert("Activities cannot be empty!");
+    event.value = currentActivity;
+    return;
+  }
+  activities.forEach((activity) => {
+    if (activity.activity === currentActivity) {
+      activity.activity = event.value;
+    }
+  });
+  localStorage.setItem("activities", JSON.stringify(activities));
+}
+
+function addActivity() {
+  const activity = document.querySelector("form input");
+  const list = document.querySelector("ul");
+
+  if (activity.value === "") {
+    alert("You cannot have an empty activity");
+    return false;
+  }
+
+  localStorage.setItem(
+    "activities",
+    JSON.stringify([
+      ...JSON.parse(localStorage.getItem("activities") || "[]"),
+      { activity: activity.value, completed: false },
+    ])
+  );
+
+  const li = document.createElement("li");
+  li.innerHTML = `<input type="checkbox" onclick="activityComplete(this)" class="box">
+      <input type="text" value="${activity.value}" class="activity" onfocus="getCurrentActivity(this)" onblur="editActivity(this)">
+      <span class="close" onclick="removeActivity(this)">&times;</span>`;
+  list.insertBefore(li, list.children[0]);
+
+  activity.value = "";
+}
+
+function removeActivity(event) {
+  let activities = Array.from(JSON.parse(localStorage.getItem("activities")));
+  activities.forEach((activity) => {
+    if (activity.activity === event.parentNode.children[1].value) {
+      activities.splice(activities.indexOf(activity), 1);
+    }
+  });
+  localStorage.setItem("activities", JSON.stringify(activities));
+  event.parentElement.remove();
+}
+
+var currentActivity = null;
+
+function getActivity(event) {
+  currentActivity = event.value;
+}

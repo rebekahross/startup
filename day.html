@@ -29,16 +29,6 @@
     </header>
 
     <main>
-      <section>
-        <h3>Filter</h3>
-        <hr />
-        <button class="btn filter-button">+ Activity</button>
-        <hr />
-        <button class="btn filter-button">+ Group / People</button>
-        <hr />
-      </section>
-
-      <section>
         <div class="dateArrows arrows">
           <span id="prev"><button class="btn"><img class="arrow" src="left-arrow.png" alt="left-arrow"></button></span>
         </div>
@@ -53,9 +43,10 @@
           <div id="modalPopUp" class ="modal">
             <div class="modal-content">
               <h2 class="padding">Create new activity</h2>
-              <label for="text" class="padding">Activity:</label>
+              <form>
               <input id="activity" type ="text" placeholder = "Activity"/>
-              <button class="btn btn-primary" onclick="save()">Save</button>
+              <button class="btn btn-primary" type="text">Add</button>
+            </form>
             <span class="close">&times;</span>
           </div>
          </div>
@@ -67,10 +58,12 @@
           </div>
         </div>
     </div>
-    <div>
-      <p class="activity">1234</p>
+    <div class="center">
+      <h5>To-Do</h5>
     </div>
-      </section>
+          <ul class="activityList">
+          </ul>
+      
     </main>
   </body>
 </html>

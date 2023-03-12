@@ -3,6 +3,8 @@
   <head>
     <title>Account</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="account.js" defer></script>
+ 
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -29,25 +31,25 @@
         </header>
 
         <main>
-            <section>
-              <h3>Filter</h3>
-              <hr />
-              <button class="btn">General</button>
-              <hr />
-              <button class="btn filter-button">Security</button>
-              <hr />
-              <button class="btn filter-button">Privacy</button>
-              <hr />
-            </section>
-            <section>
-              <div class="settings-info">
-                  <h2>General Account Settings</h2>
+              <div class="settings-info padding">
+                  <h2>Account Settings</h2>
                   <hr />
                   <table width = 100%>
                     <tr>
                         <th width = 40%>Name</th>
-                        <td class="grey-font" width = 50%>Rebekah Ross</td>
-                        <td width = 10%><button class = "btn edit-text">Edit</button></td>
+                        <td class="grey-font account-name" width = 50%>Rebekah Ross</td>
+                        <td width = 10%>
+                          <button id="modalBtn" class="btn edit-text">Update</button>
+                          <div id="modalPopUp" class ="modal">
+                            <div class="modal-content center">
+                              <form>
+                              <input id="name" type ="text" placeholder = "Name"/>
+                              <button class="btn btn-primary" type="text" onclick="updateName()">Update</button>
+                            </form>
+                            <span class="close">&times;</span>
+                          </div>
+                         </div>
+                        </td>
                     </tr>
                     <tr>
                         <th>Username</th>
@@ -72,7 +74,6 @@
                   </table>
                   <hr />
               <div class="header-thing">
-                <button class="btn btn-primary">Save</button>
                 
                 <label class="btn btn-primary"><a class="active-button" href="index.html">Return to calendar</a></label>
                
@@ -80,7 +81,6 @@
                 </label>
                 
               </div>
-            </section>
           </main>
         </body>
       </html>
