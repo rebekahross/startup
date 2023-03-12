@@ -28,4 +28,7 @@ I learned that the internet is a great tool to use when trying to learn more. I 
 
 What I learned from doing the Simon Javascript
 
- I think this is a pretty difficult concept. Javascript is difficult to understand and incorporate, but one thing I learned is to start small and work bigger from there. My code and implementation does not need to be perfect on the first run through or attempt, so I just need to get plugging along and making an effort to improve my code and understand what is happening in the code.
+I think this is a pretty difficult concept. Javascript is difficult to understand and incorporate, but one thing I learned is to start small and work bigger from there. My code and implementation does not need to be perfect on the first run through or attempt, so I just need to get plugging along and making an effort to improve my code and understand what is happening in the code.
+
+What I learned from the Startup Javascript
+This was a pretty difficult activity for me. I think that I learned some valuable things though. I was able to learn about other libraries that are useful in writing my code. I learned how to make pop-up (modal) boxes using javascript, which is a cool feature. I learned that sometimes I try too hard to complicate things that really aren't that difficult.
