@@ -32,3 +32,7 @@ I think this is a pretty difficult concept. Javascript is difficult to understan
 
 What I learned from the Startup Javascript
 This was a pretty difficult activity for me. I think that I learned some valuable things though. I was able to learn about other libraries that are useful in writing my code. I learned how to make pop-up (modal) boxes using javascript, which is a cool feature. I learned that sometimes I try too hard to complicate things that really aren't that difficult.
+
+What I learned from the Simon Service
+I learned that service is a way to standardize things across the internet, so there is more uniformity and support. This is how different devices know how to connect the same way. I honestly have no idea how I'd implement this on my own though.
+
