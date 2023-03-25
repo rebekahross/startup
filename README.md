@@ -36,3 +36,6 @@ This was a pretty difficult activity for me. I think that I learned some valuabl
 What I learned from the Simon Service
 I learned that service is a way to standardize things across the internet, so there is more uniformity and support. This is how different devices know how to connect the same way. I honestly have no idea how I'd implement this on my own though.
 
+What I learned from the Simon DB
+
+I learned about creating a database for my users. I was actually wanting to use this on my javascript aspect, and I just couldn't figure out how to do it, so I'm glad to see that there's a way to implement this. Basically, there is a database, and items get stored to it as things get added.
