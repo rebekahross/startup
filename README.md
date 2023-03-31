@@ -36,3 +36,6 @@ I learned about creating a database for my users. I was actually wanting to use 
 
 What I learned from the Simon Login
 This was very valuable for me and my project. Logging in to a website is very important to the functionality of the website, and it's cool to see how adding a user creates a new object in my database. I learned that the code for this stuff is pretty complicated, and I'm a little nervous for when I have to implement it in my Simon app, but it is exciting to see that I'm starting to understand how all of these technologies are coming together.
+
+What I learned from the Simon Websocket
+I learned that there's a way to get live interactions between users of an app. I'm not really sure what all the words mean in the peerProxy app, but I'm excited to implement it in my own code.
