@@ -39,3 +39,6 @@ This was very valuable for me and my project. Logging in to a website is very im
 
 What I learned from the Simon Websocket
 I learned that there's a way to get live interactions between users of an app. I'm not really sure what all the words mean in the peerProxy app, but I'm excited to implement it in my own code.
+
+What I learned from the Simon React
+This was pretty confusing. I think that there are a lot of steps that I could very easily miss. I think that there is a lot of moving things around for this project, and I'm glad that there is a walk through for this assignment. I think that React seems like a really cool thing to implement which would be worth learning more about.
