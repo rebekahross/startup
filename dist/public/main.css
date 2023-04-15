@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Tilt Neon", cursive;
+  padding: 1em;
+  background-color: #2929ff;
+  color: rgb(225, 224, 224);
+  display: flex;
+}
+
+footer {
+  flex: 0 30px;
+}
+
+header p {
+  font-size: 14px;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+.account {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  height: 100%;
+}
+
+footer a {
+  float: right;
+}
+
+section:nth-child(1) {
+  width: 100%;
+  padding: 15px;
+}
+
+main {
+  flex: 1 calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+th {
+  text-align: left;
+}
+
+.buttons {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.header-thing {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+
+.button-clicks {
+  text-decoration: none;
+  color: black;
+}
+
+.active-button {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.today {
+  background-color: black;
+}
+
+.button-left {
+  text-align: left;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.dateArrows {
+  text-align: center;
+  flex-direction: column;
+}
+
+.account-image {
+  height: 50px;
+  width: 50px;
+}
+
+figcaption {
+  font-size: smaller;
+  color: white;
+}
+
+.title {
+  padding: 10px;
+  flex: 12;
+  font-family: "Tilt Neon" !important;
+}
+
+.day-table {
+  color: rgb(186, 185, 185);
+}
+
+.grey-account {
+  width: 300px;
+  height: 300px;
+}
+
+.grey-font {
+  color: rgb(113, 109, 109);
+}
+
+.settings-info {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+  flex-direction: row;
+}
+
+.padding {
+  padding: 10px;
+}
+
+h2.padding {
+  padding-top: 30px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  width: calc(100% / 7);
+  font-size: 15px;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: black;
+  color: white;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.activityList {
+  list-style-type: none;
+  border: 15px;
+  text-align: left;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: lightgray;
+}
+
+.activity {
+  padding: 10px;
+  border-style: none;
+  background-color: lightgray;
+}
+
+.margin {
+  margin: 7px;
+}
+
+@media (max-height: 500px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 100vh;
+  }
+}
