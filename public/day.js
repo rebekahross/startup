@@ -13,13 +13,6 @@ window.onclick = function (event) {
   }
 };
 
-// function getPlayerName() {
-//   return localStorage.getItem("month") ?? "Mystery player";
-// }
-
-// const playerNameEl = document.querySelector(".player-name");
-// playerNameEl.textContent = this.getPlayerName();
-
 const hoursTag = document.querySelector(".hours"),
   currentDate = document.querySelector(".current-date"),
   prevNextArrow = document.querySelectorAll(".arrows span");
@@ -277,55 +270,3 @@ function callService(url, displayCallback) {
 }
 
 callService("https://api.quotable.io/random", displayQuote);
-
-// async function loadActivities() {
-//   let activities = [];
-//   try {
-//     // Get the latest high scores from the service
-//     const response = await fetch("/api/activities");
-//     activities = await response.json();
-
-//     // Save the scores in case we go offline in the future
-//     localStorage.setItem("activities", JSON.stringify(activities));
-//   } catch {
-//     // If there was an error then just use the last saved scores
-//     const activitiesText = localStorage.getItem("activities");
-//     if (activitiesText) {
-//       activities = JSON.parse(activitiesText);
-//     }
-//   }
-
-//   displayActivities(activities);
-// }
-
-// function displayActivities(activities) {
-//   const tableBodyEl = document.querySelector("#activities");
-
-//   if (activities.length) {
-//     // Update the DOM with the scores
-//     for (const [i, activity] of activities.entries()) {
-//       const positionTdEl = document.createElement("td");
-//       const nameTdEl = document.createElement("td");
-//       const scoreTdEl = document.createElement("td");
-//       const dateTdEl = document.createElement("td");
-
-//       positionTdEl.textContent = i + 1;
-//       nameTdEl.textContent = activity.name;
-//       activityTdEl.textContent = activity.score;
-//       dateTdEl.textContent = activity.date;
-
-//       const rowEl = document.createElement("tr");
-//       rowEl.appendChild(positionTdEl);
-//       rowEl.appendChild(nameTdEl);
-//       rowEl.appendChild(scoreTdEl);
-//       rowEl.appendChild(dateTdEl);
-
-//       tableBodyEl.appendChild(rowEl);
-//     }
-//   } else {
-//     tableBodyEl.innerHTML =
-//       "<tr><td colSpan=4>Add your first activity</td></tr>";
-//   }
-// }
-
-// loadActivities();

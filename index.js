@@ -84,20 +84,20 @@ secureApiRouter.use(async (req, res, next) => {
 });
 
 // GetActivities
-// secureApiRouter.get("/activities", async (req, res) => {
-//   const activities = await DB.getActivities();
-//   res.send(activities);
-// });
+secureApiRouter.get("/activities", async (_req, res) => {
+  const activities = await DB.getActivities();
+  res.send(activities);
+});
 
 // Submit Activity
-// secureApiRouter.post("/activity", async (req, res) => {
-//   await DB.addActivity(req.body);
-//   const activity = await DB.getActivities();
-//   res.send(activity);
-// });
+secureApiRouter.post("/activity", async (req, res) => {
+  await DB.addActivity(req.body);
+  const activities = await DB.getActivities();
+  res.send(activities);
+});
 
 // Default error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, _req, res, _next) {
   res.status(500).send({ type: err.name, message: err.message });
 });
 
