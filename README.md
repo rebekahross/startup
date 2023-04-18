@@ -42,3 +42,6 @@ I learned that there's a way to get live interactions between users of an app. I
 
 What I learned from the Simon React
 This was pretty confusing. I think that there are a lot of steps that I could very easily miss. I think that there is a lot of moving things around for this project, and I'm glad that there is a walk through for this assignment. I think that React seems like a really cool thing to implement which would be worth learning more about.
+
+What I learned from Startup Service
+I learned that there is a lot that goes into even a simple website. I think that MongoDB is a very useful tool for authenticating data for a username and password. I learned that making sure data is authenticated is pretty easy to implement using MongoDB. I learned that you can request information from a third party endpoint. I learned that websockets are important tools for establishing connections between multiple users.

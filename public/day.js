@@ -275,11 +275,6 @@ function configureWebSocket() {
   const protocol = window.location.protocol === "http:" ? "ws" : "wss";
   this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
   this.displayMsg("system", "game", "connected");
-  this.displayMsg("user", msg.from, `is on`);
-  //   } else if (msg.type === GameStartEvent) {
-  //     this.displayMsg("user", msg.from, `started a new game`);
-  //   }
-  // };
 }
 
 function displayMsg(cls, from, msg) {
@@ -288,14 +283,5 @@ function displayMsg(cls, from, msg) {
     `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` +
     chatText.innerHTML;
 }
-
-// function broadcastEvent(from, type, value) {
-//   const event = {
-//     from: from,
-//     type: type,
-//     value: value,
-//   };
-//   this.socket.send(JSON.stringify(event));
-// }
 
 configureWebSocket();
