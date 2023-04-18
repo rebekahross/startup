@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const express = require("express");
 const app = express();
 const DB = require("./database.js");
-// const { peerProxy } = require("./peerProxy.js");
+const { peerProxy } = require("./peerProxy.js");
 
 const authCookieName = "token";
 
@@ -70,11 +70,11 @@ apiRouter.get("/user/:email", async (req, res) => {
 });
 
 // secureApiRouter verifies credentials for endpoints
-var secureApiRouter = express.Router();
+const secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-  authToken = req.cookies[authCookieName];
+  const authToken = req.cookies[authCookieName];
   const user = await DB.getUserByToken(authToken);
   if (user) {
     next();
@@ -83,21 +83,8 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
-// GetActivities
-secureApiRouter.get("/activities", async (_req, res) => {
-  const activities = await DB.getActivities();
-  res.send(activities);
-});
-
-// Submit Activity
-secureApiRouter.post("/activity", async (req, res) => {
-  await DB.addActivity(req.body);
-  const activities = await DB.getActivities();
-  res.send(activities);
-});
-
 // Default error handler
-app.use(function (err, _req, res, _next) {
+app.use(function (err, req, res, next) {
   res.status(500).send({ type: err.name, message: err.message });
 });
 
@@ -115,8 +102,8 @@ function setAuthCookie(res, authToken) {
   });
 }
 
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-//peerProxy(httpService);
+peerProxy(httpService);

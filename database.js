@@ -14,7 +14,6 @@ const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
 const userCollection = client.db("startup").collection("user");
-const activityCollection = client.db("startup").collection("activity");
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
@@ -38,20 +37,8 @@ async function createUser(email, password) {
   return user;
 }
 
-function addActivity(activity) {
-  activityCollection.insertOne(activity);
-}
-
-function getActivities() {
-  const query = {};
-  const cursor = activityCollection.find(query, options);
-  return cursor.toArray();
-}
-
 module.exports = {
   getUser,
   getUserByToken,
   createUser,
-  addActivity,
-  getActivities,
 };
