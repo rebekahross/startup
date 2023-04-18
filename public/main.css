@@ -261,3 +261,7 @@ h2.padding {
     flex: 1 100vh;
   }
 }
+
+.chat {
+  color: black;
+}
